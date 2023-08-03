@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.cart-new{
+.cart-new, .cart-new a{
     font-size: 40px; 
     color:white;
     font-weight: 700;
@@ -16,6 +16,8 @@
     z-index: 2;
     padding-right: 20px;
 }
+
+
 
 html {
     position: relative;

@@ -65,7 +65,7 @@ products.forEach((product) => {
         <img class="card-img-top" 
         src="${product.image}" alt="Card image cap" style="height:17em">
         <div class="card-body">
-            <h5 class="card-title">${product.name}</h5>
+            <h5 class="card-title text-break">${product.name}</h5>
             <p class="card-text">₹ ${(product.price/100).toFixed(2)}</p>
             <div class="py-2">
                 <img class="product-rating-stars" src="images/ratings/rating-${product.rating*10}.png" style="width:5em">
@@ -87,11 +87,11 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 
 if(!cart){
     cart = [{
-            prodId: '5',
+            prodId: '4',
             quantity: 1
         },
         {
-            prodId: '4',
+            prodId: '3',
             quantity: 2
         }];
 }
@@ -147,6 +147,7 @@ function addToCart(productId){
             });
         }
 
+        alert("Item added to cart");
         saveToStorage();
         updateCartQuantity();
 }
@@ -170,6 +171,7 @@ function deleteFromCart(productId){
 
     cart=newCart; 
     
+    alert("Item deleted from cart");
     saveToStorage();
     updateCartQuantity();
 }
@@ -188,8 +190,8 @@ function displayCart(){
                     <img class="card-img-top" 
                     src="${product.image}" alt="Card image cap" style="height:10em;">
                     <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text">₹ ${(product.price/100).toFixed(2)}<br>
+                        <h5 class="card-title text-break">${product.name}</h5>
+                        <p class="card-text text-break">₹ ${(product.price/100).toFixed(2)}<br>
                         Quantity: ${(item.quantity)}</p>
                         <button class="delete-item btn btn-primary m-3"
                         data-product-id="${product.id}">
