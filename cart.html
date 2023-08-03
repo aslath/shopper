@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shopper-cart</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/shopper.css">
+    </head>
+
+    <body class="bg-body">
+        <header >
+            <div class="row">                
+                <div class="my-3 px-4 text-white">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-info p-2 border">
+                        <a class="navbar-brand" href="index.html" title="Go to Cart">
+                            <div class="cart-new">
+                                Shopper
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="width:100%">
+                          <ul class="navbar-nav ms-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="cart.html" >
+                                <div class="cart-new">
+                                  <i class="fa">&#xf07a;</i>
+                                  <span class="cart-count"> 0 </span>                                
+                                </div>
+                             </a>
+                            </li>                                                       
+                        </ul>
+                          
+                          <form class="form-inline my-2 my-lg-0" >
+                            <div class="input-group ">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <span class="input-group-btn p-2">
+                                <button class="btn btn-success my-2 my-sm-0" type="submit"  id="search">Search</button>
+                                </span>
+                            </form>
+                        </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </header>
+        
+        <section id="cart-products" >            
+            <div class="container-fluid">
+                <div class="row mt-5 me-5">
+                    <div class="col-md-8 mb-1">
+                        <div class="row m-3 ">
+                            <h3>Cart</h3>
+                            <hr>
+                        </div>
+                        <div class="row m-3 js-cart-products">
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 bg-light ms-4 ms-md-0 mb-2 ps-0 border" style="height: 25em;">
+                        <div class="row ms-0 my-3">
+                            <h3>Order summary</h3>
+                            <hr>
+                        </div>
+                        <div class="row m-3 js-order-summary">
+                            <div class="col-6">
+                                <p>Item total: </p>
+                                <p>Tax:</p>
+                            </div>
+                            <div class="col-6">
+                                <p id="item-total" style="text-align: end;">0</p>
+                                <p id="tax" style="text-align: end;">0</p>
+                            </div>
+                            <div><hr></div>
+                            <div class="col-6" style="color:darkred; font-weight:bold">
+                                <p>Order total: </p>
+                            </div>
+                            <div class="col-6" style="color:darkred; font-weight:bold">
+                                <p id="order-total" style="text-align: end;">0</p>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="button">Place Order</button>                    
+                              </div>
+                        </div>
+                    </div>
+                </div>                
+        </div>
+        </section>
+
+        <footer class="footer bg-light text-center text-lg-start" >
+           <div class="text-center p-3">
+              © 2023               
+            </div>           
+        </footer>
+        
+        <script src="scripts/shopper.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
